@@ -2,6 +2,7 @@ package boardgame;
 
 public class Position {
 	
+//	linha e coluna são colocadas como inteiro pois irão representar uma matriz
 	private int row;
 	private int column;
 	
