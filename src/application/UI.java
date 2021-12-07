@@ -66,12 +66,18 @@ public class UI {
 		}else{
 //			imprime peças coloridas, brancas e pretas(amarelas) e depois reseta a formatação.
             if (piece.getColor() == Color.WHITE) {
-                System.out.print(ANSI_GREEN + piece + ANSI_RESET);
+                System.out.print(ANSI_WHITE + piece + ANSI_RESET);
             }
             else {
-                System.out.print(ANSI_PURPLE + piece + ANSI_RESET);
+                System.out.print(ANSI_YELLOW + piece + ANSI_RESET);
             }
 		}
 		System.out.print(" ");
+	}
+	
+//	Limpar histórico de impressão do terminal 
+	public static void clearScreen() {
+		System.out.print("\033[H\033[2J");
+		System.out.flush();
 	}
 }
