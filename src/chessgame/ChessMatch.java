@@ -54,7 +54,10 @@ public class ChessMatch {
 //	Validação da posição de origem da peça
 	private void validateSourcePosition(Position position) {
 		if(!board.thereIsAPiece(position)) {
-			throw new ChessgameException("This position is not on the board");
+			throw new ChessgameException("There is no piece on source position");
+		}
+		if(!board.piece(position).isThereAnyPossibleMove()) {
+			throw new ChessgameException("There is no possible moves for the chosen piece");
 		}
 	}
 	
