@@ -35,7 +35,7 @@ public class ChessPosition {
 	
 //	Converte um matriz[linha][coluna] para uma chessPosition
 	protected static ChessPosition fromPosition(Position position) {
-		return new ChessPosition( (char)('a' - position.getColumn()), (8 - position.getRow()) );
+		return new ChessPosition( (char)('a' + position.getColumn()), (8 - position.getRow()) );
 	}
 	
 	@Override
