@@ -7,6 +7,8 @@ import java.util.Scanner;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
+import boardgame.Board;
+import boardgame.Position;
 import chessgame.ChessMatch;
 import chessgame.ChessPiece;
 import chessgame.ChessPosition;
@@ -102,7 +104,7 @@ public class UI {
 //	metódo para imprimir uma única peça
 	private static void printPiece(ChessPiece piece, boolean background) {
 		if(background) {
-			System.out.print(ANSI_GREEN_BACKGROUND);
+			System.out.print(ANSI_BLUE_BACKGROUND);
 		}
 		if(piece == null) {
 			System.out.print("-" + ANSI_RESET);
